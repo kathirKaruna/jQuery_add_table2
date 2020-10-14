@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Create Table Assignment2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	*{
+		margin:0;
+		padding: 0;
+	}
+	body{
+		background-image: linear-gradient(120deg,#9DC5C3 0%,#5E5C5C 80%);
+		font-family: times new roman;
+	}
+	.add{
+		text-align: center;
+		font-size: 26px;
+		font-weight: 600;
+
+	}
+	.lab{
+		font-size: 18px;
+	}
+	.save{
+		max-width: 200px;
+		font-size:24px;
+		border:none;
+	}
+	.card{
+		max-width: 80%;
+		border-radius: 10px 100px 10px 100px ;
+		background-image: linear-gradient(120deg,#D7E1EC 0%,#FFFFFF 80%);
+	}
+	input[type=submit]{
+		background-image: linear-gradient(120deg,#0BAB64 0%,#3BB78F 80%,#166D3B)!important;
+	}
+	input[type=submit]:hover{
+		background-image: linear-gradient(120deg,#380036 0%,#0CBABA 80%)!important;
+		color: white;
+
+	}
+	input[type=reset]{
+		background-image: linear-gradient(120deg,#FE0944 0%,#FEAE96 80%)!important;
+	}
+	input[type=reset]:hover{
+		background-image: linear-gradient(120deg,#FFC719 0%,#BF033B 80%)!important;
+
+	}
+	table th{
+		background-color: #045DE9;
+
+	}
+	tbody{
+		  background-color: #045DE9;
+	}
+	.fas{
+		font-size:48px;
+		color:blue;
+	}
+	.material-icons{
+		font-size:48px;
+		color:blue;
+		border:none;
+	}
+	.form-control-lg{
+		border: 1px solid lightgray;
+	}
+</style>
+
+
+</head>
+<body>
+<div class="container-fluid">
+	<div class="container">
+		<h1 class="text-dark pt-5 text-center"><u>Jquery Assignment2</u></h1>
+		<div class="row">
+	     <div class="col-12">
+		<div class="card mt-5 ml-auto mr-auto">
+			<h1 class="text-dark pt-5 text-center"><u>Customer Details</u></h1>
+		<div class="row text-dark font-weight-bold mt-4 ml-4 mr-4">
+			<div class="col-4">
+				<div class="form-group">
+					<label for="cName" class="lab">Customer Name</label>
+					<input type="text" id="cName" name="cName" class="form-control">
+					<input type="hidden" id="id"/>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="form-group">
+					<label for="cName" class="lab">Customer Email</label>
+					<input type="text" id="eMail" name="eMail" class="form-control">
+				</div>
+			</div>
+			<div class="col-4">
+				<label for="Customer" class="lab">Customer Type</label>
+				<div class="form-inline">
+					<input type="radio" id="corporate" name="corporate" value="corporate"  class="form-control">
+				       <label for="normal" class="text-dark radio-inline">Corporate</label>	
+					  <input type="radio" id="normal" name="corporate" value="normal"  class="form-control ml-2">
+					  <label for="normal" class="text-dark radio-inline">Normal</label>
+				 </div>
+			</div>
+		</div>
+
+        <label for="cAdd" class="add text-primary text-center">Communication Address</label>
+		<div class="row text-dark font-weight-bold ml-4 mr-4">
+				<div class="col-4">
+					<div class="form-group">
+					<label for="add1"  class="lab">Address Line1</label>
+					<input type="text" id="cAdd1" name="cAdd1" class="form-control">
+				  </div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+					<label for="add2"  class="lab">Address Line2</label>
+					<input type="text" id="cAdd2" name="cAdd2" class="form-control">
+				  </div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+					<label for="city"  class="lab">City</label>
+					<input type="text" id="cCity" name="cCity" class="form-control">
+				  </div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+					<label for="state"  class="lab">State</label>
+					<input type="text" id="cState" name="cState" class="form-control">
+				  </div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+					<label for="pCode"  class="lab">Pin Code</label>
+					<input type="text" id="cPcode" name="cPcode" class="form-control">
+				  </div>
+				</div>
+		       </div>
+              
+              <label for="cAdd" class="add text-primary">Permanent Address</label>
+		       <div class="row text-dark font-weight-bold ml-4 mr-4">
+		
+				<div class="col-4">
+					<div class="form-group">
+					<label for="add1"  class="lab">Address Line1</label>
+					<input type="text" id="pAdd1" name="pAdd2" class="form-control">
+				  </div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+					<label for="add2"  class="lab">Address Line2</label>
+					<input type="text" id="pAdd2" name="pAdd2" class="form-control">
+				  </div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+					<label for="city"  class="lab">City</label>
+					<input type="text" id="pCity" name="pCity" class="form-control">
+				  </div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+					<label for="state"  class="lab">State</label>
+					<input type="text" id="pState" name="pState" class="form-control">
+				  </div>
+				</div>
+				<div class="col-4">
+				   <div class="form-group">
+					<label for="pCode"  class="lab">Pin Code</label>
+					<input type="text" id="pPcode" name="pPcode" class="form-control">
+				  </div>
+				</div>
+			<div class="col-12">
+				<label for="branches"  class="lab ml-2">Branches</label>
+				<a href="#" id="add_exercise" name="cloneme" style='font-size:24px'
+				 class='far fa-plus-square ml-3' onclick="cloning()"></a></h2>
+			 
+           	  <div id="exercises" class="exercise">
+            </div>  
+		</div> 
+
+			<div class="col-6 mt-4 mb-3">
+				<div class="form-group">
+					<input type="submit" id="submit" name="submit" class="text-center ml-auto save form-control text-white font-weight-bold" value="Submit" onclick="insertDetails()">
+				  </div>
+			</div>
+			<div class="col-6 text-center mt-4 mb-3">
+				<div class="form-group">
+					<input type="reset" id="reset" name="reset" class=" save form-control  text-white font-weight-bold" value="Reset" onclick="resetInput()">
+				  </div>
+			</div>
+       </div>
+
+	  </div>
+	</div>
+  </div>
+	  <table class="table table-bordered text-white text-center mt-5">
+	    <thead>
+	      <tr>
+	      	<th>S.No</th>
+	        <th>Customer Name</th>
+	        <th>Customer Email</th>
+	        <th>Customer Type</th>
+	        <th>Update/Delete</th>
+	      </tr>
+	    </thead>
+	     <tbody id="displayArea">
+	     </tbody>
+	  </table>
+	</div>
+</div>
+
+
+<script>
+function addTable(){
+  $('#displayArea').empty();
+    for(i = 0; i < details.length; i++){
+      var detObj = details[i];
+       $('#displayArea').append("<tr id='row"+i+"'><td>" + detObj.sNo + "</td><td>" + detObj.cName + "</td><td>" + detObj.eMail + "</td><td>" + detObj.cType + "</td><td><span class='editrow' style='cursor:pointer;'><a style='cursor:pointer;color:black' class='fa fa-edit' href='javascript:void(0);'  onclick ='editDetail("+detObj.id+");' >Edit</a></span><span><a onclick='deleteRow("+detObj.id+");' class='material-icons'style='font-size:30px;color:red;margin-left:30px;cursor:pointer;'>delete</a></span></td></tr>");
+    }
+}  
+
+ var details = [];
+ var sNo = 1;
+ var customId = 1;
+function insertDetails(){
+
+	var branchArray = [];
+
+    var id = $('#id').val();
+    if(null != id && id != ""){
+       for(i = 0; i < details.length; i++){
+		var obj = details[i];
+		if(obj.id == id){
+	     obj.cName = $('#cName').val();
+         obj.eMail = $('#eMail').val();
+         obj.cType = $('input[type="radio"]:checked').val();  
+         obj.Add1 = $('#cAdd1').val();
+		 obj.Communication.Add2	= $('#cAdd2').val();
+		 obj.Communication.cCity = $('#cCity').val();
+		 obj.Communication.cState = $('#cState').val();
+		 obj.Communication.cPcode = $('#cPcode').val();
+
+		 obj.Permanent.pAdd1 = $('#pAdd1').val();
+		 obj.Permanent.pAdd2 = $('#pAdd2').val();
+		 obj.Permanent.pCity = $('#pCity').val();
+		 obj.Permanent.pState = $('#pState').val();
+		 obj.Permanent.pPcode = $('#pPcode').val();
+		 for(var k = 1;k<branchIndex;k++){	
+			var branchField = $('#branch_'+k);
+			if(null != branchField && branchField != 'undefined'){
+				var branchName = branchField.val();
+			} 
+			branchArray.push(branchName);
+	  	}
+		 obj.branches = branchArray;
+          details[i] = obj;
+          addTable();
+          $("#input").show();
+	      $('input[type="text"]').val("");
+	      	$('#exercises').empty();
+		}
+	}
+    }else{
+	  	for(var k = 1;k<branchIndex;k++){	
+			var branchField = $('#branch_'+k);
+			if(null != branchField && branchField != 'undefined'){
+
+				var branchName = branchField.val();
+			} 
+			branchArray.push(branchName);
+	  	}
+    	var detObj = {
+		  	"id":customId,
+		  	"sNo":sNo,
+			"cName":$('#cName').val(),
+			"eMail":$('#eMail').val(),
+			"cType":$('input[type="radio"]:checked').val(),
+		    "Communication":{ 
+					"Add1":$('#cAdd1').val(),
+					"Add2":$('#cAdd2').val(),
+					"cCity":$('#cCity').val(),
+					"cState":$('#cState').val(),
+					"cPcode":$('#cPcode').val(),
+				},
+			"Permanent":{
+					"pAdd1":$('#pAdd1').val(),
+					"pAdd2":$('#pAdd2').val(),
+					"pCity":$('#pCity').val(),
+					"pState":$('#pState').val(),
+					"pPcode":$('#pPcode').val(),
+				},
+			branches:branchArray
+	}; 
+	details.push(detObj);
+	addTable();
+	sNo++;
+	customId++;
+	$('#exercises').empty();
+	 $('#input').show();
+	 $('input[type="text"]').val("");
+
+    } 
+
+     cloning(); 
+}
+
+$(document).ready(function(){
+	$('#submit').click(function(){
+	$('#corporate').prop("checked", false);
+	$('#normal').prop("checked", false);
+});
+});
+
+function editDetail(id){
+	$('#input').empty();
+	for(i = 0; i < details.length; i++){
+		var obj = details[i];
+		if(obj.id == id){
+			$('#id').val(obj.id); 
+	        $('#cName').val(obj.cName);
+	        $('#eMail').val(obj.eMail); 
+	        $("#"+obj.cType).prop("checked", true);
+	        $('#cAdd1').val(obj.Communication.Add1);
+			$('#cAdd2').val(obj.Communication.Add2);
+			$('#cCity').val(obj.Communication.cCity);
+			$('#cState').val(obj.Communication.cState);
+			$('#cPcode').val(obj.Communication.cPcode);
+
+			$('#pAdd1').val(obj.Permanent.pAdd1);
+			$('#pAdd2').val(obj.Permanent.pAdd2);
+			$('#pCity').val(obj.Permanent.pCity);
+			$('#pState').val(obj.Permanent.pState);
+			$('#pPcode').val(obj.Permanent.pPcode);
+			constructBranches(obj.branches);
+		}
+	}
+}
+
+function constructBranches(branchList){ 
+	$('#exercises').empty();
+	branchIndex =1;
+	var branch = "";
+	for(var k=0;k<branchList.length;k++){
+		var branchName = branchList[k];
+		branch = branch +'<div><input type="text" class="form-control-lg ml-3 mt-3" id="branch_'+branchIndex+'" name="exercise[]" value="'+branchName+'"><i class="material-icons remove ml-3" style="font-size:26px;cursor:pointer;" >delete</i></div>';
+		branchIndex++;
+	}
+ 	$('#exercises').append(branch);
+   
+}
+
+var branchIndex = 1;
+function cloning(){
+ $('#exercises').append('<div><input type="text" class="form-control-lg ml-3 mt-3" id="branch_'+branchIndex+'" name="exercise[]"><i class="material-icons remove ml-3" style="font-size:26px;cursor:pointer;" href="javascript: void(0);" >delete</i></div>');
+  branchIndex++;
+}
+  $('#exercises').on('click', '.remove', function() {
+   $(this).parent().remove();
+});
+
+
+function deleteRow(id){
+  var emptyArray = [];
+	for(i = 0; i < details.length; i++){
+		var obj = details[i];
+		if(obj.id != id){
+		 emptyArray.push(obj);
+		}
+	}
+	details = emptyArray;
+	addTable();
+}
+
+function resetInput(){
+  $('input[type="text"]').val("");
+  $('input[type="radio"]').prop('checked',false);
+}
+
+cloning(); 
+
+</script>
+
+</body>
+</html>
